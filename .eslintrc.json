@@ -12,6 +12,6 @@
     },
     "rules": {
         "linebreak-style": ["error", "windows"],
-        "import/resolver": "webpack"    
+        "no-console": "off"
     }
 }

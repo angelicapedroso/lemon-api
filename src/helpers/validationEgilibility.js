@@ -30,28 +30,28 @@ const validateEligibility = (data) => {
     classeDeConsumo, modalidadeTarifaria, tipoDeConexao, historicoDeConsumo,
   } = data;
 
-  const ineligibleReasons = [];
+  const razoesInelegibilidade = [];
 
   if (!eligibleClasses.includes(classeDeConsumo)) {
-    ineligibleReasons.push('Classe de consumo não aceita');
+    razoesInelegibilidade.push('Classe de consumo não aceita');
   }
 
   if (!eligibleTariffs.includes(modalidadeTarifaria)) {
-    ineligibleReasons.push('Modalidade tarifária não aceita');
+    razoesInelegibilidade.push('Modalidade tarifária não aceita');
   }
 
   if (!validateMinimumConsumption(tipoDeConexao, historicoDeConsumo)) {
-    ineligibleReasons.push('Consumo muito baixo para tipo de conexão');
+    razoesInelegibilidade.push('Consumo muito baixo para tipo de conexão');
   }
 
-  const annualCO2Emission = generateAnnualCO2Emission(historicoDeConsumo);
+  const economiaAnualDeCO2 = generateAnnualCO2Emission(historicoDeConsumo);
 
-  const isEligible = !ineligibleReasons.length;
+  const elegivel = !economiaAnualDeCO2.length;
 
   return {
-    elegivel: isEligible,
-    razoesInelegibilidade: ineligibleReasons,
-    economiaAnualDeCO2: annualCO2Emission,
+    elegivel,
+    razoesInelegibilidade,
+    economiaAnualDeCO2,
   };
 };
 

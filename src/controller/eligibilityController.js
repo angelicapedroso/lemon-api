@@ -1,8 +1,13 @@
 const checkEligibility = require('../service/eligibilityService');
 
 const checkEligibilityController = (req, res) => {
-  const result = checkEligibility(req.body);
-  res.status(200).json(result);
+  try {
+    const response = checkEligibility(req.body);
+    const { status, result } = response;
+    return res.status(status).json(result);
+  } catch (error) {
+    return res.status(400).json({ message: error.message });
+  }
 };
 
 module.exports = checkEligibilityController;

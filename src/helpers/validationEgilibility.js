@@ -46,7 +46,7 @@ const validateEligibility = (data) => {
 
   const economiaAnualDeCO2 = generateAnnualCO2Emission(historicoDeConsumo);
 
-  const elegivel = !economiaAnualDeCO2.length;
+  const elegivel = !razoesInelegibilidade.length;
 
   return {
     elegivel,

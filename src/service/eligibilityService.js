@@ -1,28 +1,16 @@
 const validateEligibility = require('../helpers/validationEgilibility');
 const { schema } = require('../schemas/elegibilitySchema');
+const schemaError = require('../helpers/schemaError');
 
 const checkEligibility = (data) => {
   const { elegivel, economiaAnualDeCO2, razoesInelegibilidade } = validateEligibility(data);
 
   const { error } = schema.validate(data);
-  if (error) {
-    return {
-      status: 400,
-      response: { message: error.message },
-    };
-  }
+  if (error) throw schemaError(error.message);
 
-  if (elegivel) {
-    return {
-      status: 200,
-      response: { elegivel, economiaAnualDeCO2 },
-    };
-  }
+  if (elegivel) return { elegivel, economiaAnualDeCO2 };
 
-  return {
-    status: 200,
-    response: { elegivel, razoesInelegibilidade },
-  };
+  return { elegivel, razoesInelegibilidade };
 };
 
 module.exports = checkEligibility;

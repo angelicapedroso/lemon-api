@@ -2,7 +2,7 @@ const validateEligibility = require('../helpers/validationEgilibility');
 const { schema } = require('../schemas/elegibilitySchema');
 const schemaError = require('../helpers/schemaError');
 
-const checkEligibility = (data) => {
+const eligibilityService = (data) => {
   const { elegivel, economiaAnualDeCO2, razoesInelegibilidade } = validateEligibility(data);
 
   const { error } = schema.validate(data);
@@ -13,4 +13,4 @@ const checkEligibility = (data) => {
   return { elegivel, razoesInelegibilidade };
 };
 
-module.exports = checkEligibility;
+module.exports = eligibilityService;

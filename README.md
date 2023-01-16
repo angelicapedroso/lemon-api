@@ -11,7 +11,7 @@ Este projeto é uma API que tem como objetivo avaliar a elegibilidade de um clie
 - **Nodemon** para reiniciar o servidor automaticamente
 - **Docker** para containerização da aplicação
 - **Docker Compose** para gerenciamento de containers
-- **Postman** para testes da API
+- **Postman** para testes da API e documentar
 - **VSCode** para edição de código
 
 ## Como rodar o projeto
@@ -48,9 +48,13 @@ docker-compose up
 
 A API pode ser acessada localmente através da URL: http://localhost:3001
 
+A documentação se encontra [neste link](https://documenter.getpostman.com/view/25273663/2s8ZDU64L2) no postman
+
 ### Endpoints
 
 - POST /eligibility
+
+URL: http://localhost:3001/eligibility
 
 Para utilizar o endpoint, é necessário enviar um JSON com os dados da conta de luz do cliente. O formato do JSON deve ser o seguinte:
 

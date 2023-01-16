@@ -1,4 +1,4 @@
-# Lemon Energia API
+# 🍋 Lemon Energia API
 
 Este projeto é uma API que tem como objetivo avaliar a elegibilidade de um cliente para a Lemon Energia. Para isso, é necessário que o cliente envie os dados de sua conta de luz. A partir desses dados, se for elegível, é possível calcular a quantidade de CO2 que a empresa deixaria de emitir caso usasse energia limpa. Em caso de não elegibilidade, retorna os motivos para tal.
 

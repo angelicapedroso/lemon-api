@@ -97,4 +97,4 @@ npm test
 
 ## Autor
 
-- [Angélica Pedroso](https://www.linkedin.com/in/angelica-pedroso/)
+- [Angélica Pedroso](https://www.linkedin.com/in/angelicapedroso/)

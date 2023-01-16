@@ -1,4 +1,4 @@
-const checkEligibility = require('../service/eligibilityService');
+const checkEligibility = require('../services/eligibilityService');
 
 const eligibilityController = (req, res) => {
   const data = checkEligibility(req.body);

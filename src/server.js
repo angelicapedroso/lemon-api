@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const eligibilityRouter = require('./routes/eligibility');
-const errorMiddleware = require('./middleware/errorMiddleware');
+const errorMiddleware = require('./middlewares/errorMiddleware');
 
 const app = express();
 
@@ -16,3 +16,5 @@ app.use(errorMiddleware);
 const PORT = 3001;
 
 app.listen(PORT, () => console.log('ouvindo na porta', PORT));
+
+module.exports = app;

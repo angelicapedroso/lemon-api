@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const eligibilityController = require('../controller/eligibilityController');
+const eligibilityController = require('../controllers/eligibilityController');
 
 const router = Router();
 

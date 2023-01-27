@@ -33,10 +33,5 @@ describe('Testa Eligibility Service', () => {
       expect(result).to.be.an('object');
       expect(result).to.deep.equal(output);
     });
-
-    it('Testa o retorno com um campo inválido', () => {
-      const { input } = mocks.invalidInput;
-      expect(() => elegibilityService(input)).to.throw();
-    });
   });
 });

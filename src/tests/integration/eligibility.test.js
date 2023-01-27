@@ -60,7 +60,8 @@ describe('Testa a rota de elegibilidade', async () => {
       const res = await chai.request(app)
         .post('/eligibility')
         .send(error);
-      expect(res).to.have.status(500);
+      expect(res).to.have.status(400);
+      expect(res.body).to.deep.equal({ message: '"numeroDoDocumento" is required' });
     });
   });
 });

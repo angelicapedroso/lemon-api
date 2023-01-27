@@ -1,6 +1,6 @@
 const elegible = {
   input: {
-    numeroDoDocumento: '14041737706',
+    numeroDoDocumento: '30946651000135',
     tipoDeConexao: 'bifasico',
     classeDeConsumo: 'comercial',
     modalidadeTarifaria: 'convencional',
@@ -27,7 +27,7 @@ const elegible = {
 
 const notElegibleByConsumptionClass = {
   input: {
-    numeroDoDocumento: '14041737706',
+    numeroDoDocumento: '30946651000135',
     tipoDeConexao: 'bifasico',
     classeDeConsumo: 'rural',
     modalidadeTarifaria: 'convencional',
@@ -56,7 +56,7 @@ const notElegibleByConsumptionClass = {
 
 const notElegibleByTariffModality = {
   input: {
-    numeroDoDocumento: '14041737706',
+    numeroDoDocumento: '30946651000135',
     tipoDeConexao: 'bifasico',
     classeDeConsumo: 'comercial',
     modalidadeTarifaria: 'verde',
@@ -85,7 +85,7 @@ const notElegibleByTariffModality = {
 
 const notElegibleByMinConsumption = {
   input: {
-    numeroDoDocumento: '14041737706',
+    numeroDoDocumento: '30946651000135',
     tipoDeConexao: 'bifasico',
     classeDeConsumo: 'comercial',
     modalidadeTarifaria: 'convencional',
